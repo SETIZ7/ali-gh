@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body> 
+        <div id="yourinfo"></div>
+        <script type="text/javascript" src="http://www.google.com/jsapi?key=<YOUR_GOOGLE_API_KEY>"></script>
+        <script type="text/javascript">
+            if(google.loader.ClientLocation)
+            {
+                visitor_lat = google.loader.ClientLocation.latitude;
+                visitor_lon = google.loader.ClientLocation.longitude;
+                visitor_city = google.loader.ClientLocation.address.city;
+                visitor_region = google.loader.ClientLocation.address.region;
+                visitor_country = google.loader.ClientLocation.address.country;
+                visitor_countrycode = google.loader.ClientLocation.address.country_code;
+                document.getElementById('yourinfo').innerHTML = '<p>Lat/Lon: ' + visitor_lat + ' / ' + visitor_lon + '</p><p>Location: ' + visitor_city + ', ' + visitor_region + ', ' + visitor_country + ' (' + visitor_countrycode + ')</p>';
+            }
+            else
+            {
+                document.getElementById('yourinfo').innerHTML = '<p>Whoops!</p>';
+            }
+            
+            </script>
+        <!-- <div>Country: <span id="country"></span></div>
+        <div>State: <span id="state"></span></div>
+        <div>City: <span id="city"></span></div>
+        <div>Latitude: <span id="latitude"></span></div>
+        <div>Longitude: <span id="longitude"></span></div>
+        <div>IP: <span id="ip"></span></div>
+        <script>
+          $.getJSON('https://geolocation-db.com/json/')
+             .done (function(location) {
+                $('#country').html(location.country_name);
+                $('#state').html(location.state);
+                $('#city').html(location.city);
+                $('#latitude').html(location.latitude);
+                $('#longitude').html(location.longitude);
+                $('#ip').html(location.IPv4);
+             }); -->
+    </body>
+</html>
