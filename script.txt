@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "C:/Users/setiz/Desktop/git"
+		},
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"editor.fontFamily": "`Fira Code`",
+		"editor.fontSize": 15,
+		"editor.fontLigatures": false,
+		"editor.indentSize": "tabSize",
+		"editor.letterSpacing": -0.5
+	}
+}
